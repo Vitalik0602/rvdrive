@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="rvDrive — покупка, аренда, аренда с выкупом авто в Москве. Автосервис, ремонт и обслуживание. Автоломбард, автоподбор, срочный выкуп. Надёжные машины!">
+    <meta name="keywords" content="купить авто Москва, аренда автомобилей, аренда с выкупом, автоломбард, автоподбор, комиссия авто, срочный выкуп, продажа машин, бюджетные авто, премиум автомобили, rvDrive, авто в кредит, автосервис Москва, ремонт автомобилей">
+    <title>rvDrive — Автосалон и Сервис в Москве</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"AutoDealer","name":"rvDrive","url":"https://rvdrive.ru","logo":"https://rvdrive.ru/img/logo.png","telephone":"+79775594704","address":{"@type":"PostalAddress","streetAddress":"ул. Адмирала Лазарева, д. 2","addressLocality":"Москва"}}
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="img/logo.png" alt="rvDrive Logo">
+        <span>rvDrive</span>
+    </div>
+    <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="index.html#cars">Автомобили</a>
+            <a href="index.html#services">Услуги</a>
+            <a href="service.html">Сервис</a>
+            <a href="#offers">Акции</a>
+            <a href="index.html#contacts">Контакты</a>
+            <a href="index.html#request">Заявка</a>
+        </nav>
+    <div class="social-icons">
+        <a href="https://t.me/rvDrive_Auto" target="_blank" aria-label="Telegram" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+        <a href="https://wa.me/89915914704" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.youtube.com/@rvDrive-dy6cx" target="_blank" aria-label="Youtube" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Москва · Работаем с 2023</div>
+        <h1>rvDrive — <span class="hero-accent">твой путь</span><br>к мечте</h1>
+        <p class="intro">Покупка, аренда, аренда с выкупом и собственный автосервис. Прозрачные сделки, честные цены, надёжные машины.</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">сделок</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+                <span class="stat-num" data-target="13">0</span>
+                <span class="stat-label">авто в наличии</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+                <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+                <span class="stat-label">чистые документы</span>
+            </div>
+        </div>
+        <div class="cta-container">
+            <a href="#cars" class="cta"><i class="fas fa-car"></i> Смотреть авто</a>
+            <a href="#request" class="cta secondary"><i class="fas fa-paper-plane"></i> Оставить заявку</a>
+        </div>
+    </div>
+    <div class="hero-scroll-hint">
+        <span>Листай вниз</span>
+        <i class="fas fa-chevron-down hero-scroll-icon"></i>
+    </div>
+</section>
+
+<!-- CARS -->
+<section id="cars">
+    <h2>Наши автомобили</h2>
+    <div class="cars-filter" role="group" aria-label="Фильтр">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="budget">До 1 млн</button>
+        <button class="filter-btn" data-filter="mid">1–3 млн</button>
+        <button class="filter-btn" data-filter="premium">Премиум 3млн+</button>
+        <button class="filter-btn" data-filter="rent">С арендой</button>
+    </div>
+    <div class="cars-grid">
+        <div class="car-item" data-price="4300000" data-tags="premium">
+            <div class="car-image"><img src="img/audi2.jpg" alt="Audi Q8 2019" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Audi Q8 3.0 TFSI quattro</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2019</p>
+                <p class="car-desc">340 л.с. · S-Line · Пневмоподвеска</p>
+                <div class="car-price">4 300 000 ₽</div>
+                <a href="model1.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="1600000" data-tags="mid rent">
+            <div class="car-image"><img src="img/c1.jpg" alt="Mercedes C180 2014" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Mercedes-Benz C180</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2014</p>
+                <p class="car-desc">156 л.с. · Кожа · CarPlay</p>
+                <div class="car-price">1 600 000 ₽</div>
+                <a href="model2.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="355000" data-tags="budget rent">
+            <div class="car-image"><img src="img/focus1.jpg" alt="Ford Focus 2" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Ford Focus 2</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> ~2007</p>
+                <p class="car-desc">80 л.с. · МКПП · Экономичный</p>
+                <div class="car-price">355 000 ₽</div>
+                <a href="model3.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="2800000" data-tags="mid premium">
+            <div class="car-image"><img src="img/audi11.jpg" alt="Audi A5 2019" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Audi A5 2.0 TFSI</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2019 · 145 000 км</p>
+                <p class="car-desc">190 л.с. · Кожа · LED</p>
+                <div class="car-price">2 800 000 ₽</div>
+                <a href="model4.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="650000" data-tags="budget rent">
+            <div class="car-image"><img src="img/ravon1.jpg" alt="Ravon R2 2016" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Ravon R2 1.3</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2016 · 45 000 км</p>
+                <p class="car-desc">85 л.с. · Макс. комплектация</p>
+                <div class="car-price">650 000 ₽</div>
+                <a href="model5.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="1200000" data-tags="mid">
+            <div class="car-image"><img src="img/e15.jpg" alt="Mercedes Coupe 2012" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Mercedes Coupe Sport</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2012 · 122 000 км</p>
+                <p class="car-desc">204 л.с. · AMG пакет · Люк</p>
+                <div class="car-price">1 200 000 ₽</div>
+                <a href="model6.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="4490000" data-tags="premium">
+            <div class="car-image"><img src="img/ca1.jpg" alt="Porsche Cayenne 2018" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Porsche Cayenne</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2018 · 179 000 км</p>
+                <p class="car-desc">340 л.с. · Пневмо · Вентиляция</p>
+                <div class="car-price">4 490 000 ₽</div>
+                <a href="model7.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="6500000" data-tags="premium">
+            <div class="car-image"><img src="img/range.jpg" alt="Range Rover 2020" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Range Rover 3.0 Diesel</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2020 · 89 000 км</p>
+                <p class="car-desc">Дизель · Полный привод · Без ДТП</p>
+                <div class="car-price">6 500 000 ₽</div>
+                <a href="model8.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="2750000" data-tags="mid premium">
+            <div class="car-image"><img src="img/e1.jpg" alt="Mercedes Coupe 2017" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Mercedes Coupe Sport</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2017 · 169 000 км</p>
+                <p class="car-desc">184 л.с. · AMG · CarPlay · Люк</p>
+                <div class="car-price">2 750 000 ₽</div>
+                <a href="model9.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="3000000" data-tags="mid premium">
+            <div class="car-image"><img src="img/gle1.jpg" alt="Mercedes GLE Coupe 2016" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Mercedes GLE Coupe 3.0</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2016 · 126 000 км</p>
+                <p class="car-desc">249 л.с. · Дизель · Полный привод</p>
+                <div class="car-price">3 000 000 ₽</div>
+                <a href="model10.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="2550000" data-tags="mid premium rent">
+            <div class="car-image"><img src="img/cadillac1.1.jpg" alt="Cadillac Escalade 2016" loading="lazy"><span class="car-badge car-badge-red">Хит</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Cadillac Escalade</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2016 · 135 000 км</p>
+                <p class="car-desc">409 л.с. · 6.2 бензин · После КР</p>
+                <div class="car-price">2 550 000 ₽ <span class="car-price-old">2 800 000</span></div>
+                <a href="model11.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="1200000" data-tags="mid">
+            <div class="car-image"><img src="img/ex1.jpg" alt="Ford Explorer 2012" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Ford Explorer 3.5 AWD</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2012 · 229 000 км</p>
+                <p class="car-desc">293 л.с. · Полный привод · 2 резины</p>
+                <div class="car-price">1 200 000 ₽</div>
+                <a href="model12.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+        <div class="car-item" data-price="2900000" data-tags="mid premium">
+            <div class="car-image"><img src="img/e38.jpg" alt="Mercedes Coupe Sport 2018" loading="lazy"><span class="car-badge car-badge-green">В наличии</span><span class="car-badge-rent">Аренда</span></div>
+            <div class="car-item-body">
+                <h3>Mercedes Coupe Sport AWD</h3>
+                <p class="car-year-km"><i class="fas fa-calendar-alt"></i> 2018 · 92 000 км</p>
+                <p class="car-desc">184 л.с. · AMG · Полный (редкость)</p>
+                <div class="car-price">2 900 000 ₽</div>
+                <a href="model13.html" class="cta car-cta">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="cars-no-results" id="carsNoResults" style="display:none;">
+        <i class="fas fa-search"></i>
+        <p>По выбранному фильтру авто не найдено</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>Наши услуги</h2>
+    <div class="services-grid">
+        <div class="service-item" data-aos><div class="service-icon-wrap"><i class="fas fa-car"></i></div><h4>Продажа</h4><p>Широкий выбор на любой бюджет — от бюджетных до премиальных</p></div>
+        <div class="service-item" data-aos><div class="service-icon-wrap"><i class="fas fa-key"></i></div><h4>Аренда</h4><p>Посуточно и долгосрочно. Гибкие условия, без лишних бумаг</p></div>
+        <div class="service-item" data-aos><div class="service-icon-wrap"><i class="fas fa-handshake"></i></div><h4>Аренда с выкупом</h4><p>Платишь как за аренду — в итоге автомобиль твой</p></div>
+        <div class="service-item" data-aos><div class="service-icon-wrap"><i class="fas fa-file-invoice"></i></div><h4>Комиссия</h4><p>Продадим твой автомобиль быстро и по рыночной цене</p></div>
+        <div class="service-item" data-aos><div class="service-icon-wrap"><i class="fas fa-money-bill-wave"></i></div><h4>Срочный выкуп</h4><p>Деньги в день обращения. Оценка бесплатно</p></div>
+        <div class="service-item" data-aos><div class="service-icon-wrap"><i class="fas fa-piggy-bank"></i></div><h4>Автоломбард</h4><p>Деньги под залог автомобиля. Быстро и без отказов</p></div>
+        <div class="service-item" data-aos><div class="service-icon-wrap"><i class="fas fa-search"></i></div><h4>Автоподбор</h4><p>Найдём лучший вариант по параметрам и бюджету</p></div>
+        <div class="service-item highlight-service" data-aos>
+            <div class="service-icon-wrap"><i class="fas fa-wrench"></i></div>
+            <h4>Автосервис <span class="new-badge">Новое</span></h4>
+            <p>Ремонт и ТО любых марок. Гарантия на все работы</p>
+            <a href="service.html" class="cta" style="margin-top:14px;display:inline-block;font-size:0.82em;padding:7px 16px;">Подробнее →</a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE PROMO BANNER -->
+<section id="service-promo" class="service-promo-banner">
+    <div class="service-promo-content">
+        <div class="service-promo-icon"><i class="fas fa-tools"></i></div>
+        <div class="service-promo-text">
+            <h2>Открылся автосервис rvDrive</h2>
+            <p>Мы расширяемся! Диагностика, ТО, кузовные работы и многое другое. <strong>Диагностика бесплатно</strong> при заказе ремонта.</p>
+            <ul class="service-promo-list">
+                <li><i class="fas fa-check-circle"></i> Компьютерная диагностика</li>
+                <li><i class="fas fa-check-circle"></i> Замена масла и ТО</li>
+                <li><i class="fas fa-check-circle"></i> Ремонт двигателя и ходовой</li>
+                <li><i class="fas fa-check-circle"></i> Шиномонтаж и балансировка</li>
+                <li><i class="fas fa-check-circle"></i> Кузовной ремонт и покраска</li>
+                <li><i class="fas fa-check-circle"></i> Детейлинг и химчистка</li>
+            </ul>
+        </div>
+        <div class="service-promo-cta">
+            <a href="service.html" class="cta">Все услуги сервиса</a>
+            <a href="#request" class="cta secondary">Записаться</a>
+        </div>
+    </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers">
+    <h2>Акции и спецпредложения</h2>
+    <div class="special-offers-grid">
+        <div class="special-offer-item offer-hot">
+            <div class="offer-icon"><i class="fas fa-fire"></i></div>
+            <h3>Ford Focus 2 — выкуп за 8 мес.</h3>
+            <p>Езди и плати как за аренду. Через 8 месяцев машина твоя.</p>
+            <p class="offer-price"><strong>от 49 980 ₽ / мес</strong></p>
+            <a href="#request" class="cta">Забронировать</a>
+        </div>
+        <div class="special-offer-item">
+            <div class="offer-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Срочный выкуп — деньги за 24ч</h3>
+            <p>Оценим твой автомобиль сегодня. Деньги переводим в день сделки.</p>
+            <p class="offer-price"><strong>Оценка бесплатно</strong></p>
+            <a href="#request" class="cta">Узнать цену</a>
+        </div>
+        <div class="special-offer-item">
+            <div class="offer-icon"><i class="fas fa-tools"></i></div>
+            <h3>Сервис — диагностика в подарок</h3>
+            <p>При любом заказе ремонта компьютерная диагностика бесплатно.</p>
+            <p class="offer-price"><strong>Экономия до 1 500 ₽</strong></p>
+            <a href="service.html" class="cta">Записаться</a>
+        </div>
+        <div class="special-offer-item">
+            <div class="offer-icon"><i class="fas fa-percent"></i></div>
+            <h3>Cadillac Escalade — ниже рынка</h3>
+            <p>Первая цена в РФ. Рыночная стоимость 2 800 000 ₽.</p>
+            <p class="offer-price"><strong>2 550 000 ₽</strong></p>
+            <a href="model11.html" class="cta">Смотреть авто</a>
+        </div>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us" class="why-us-section">
+    <h2>Почему выбирают нас</h2>
+    <div class="why-us-grid">
+        <div class="why-us-item" data-aos>
+            <div class="why-us-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Только чистые документы</h4>
+            <p>Проверяем каждое авто по базам ГИБДД, залогам и ДТП. Никаких сюрпризов после покупки.</p>
+        </div>
+        <div class="why-us-item" data-aos>
+            <div class="why-us-icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <h4>Честная цена</h4>
+            <p>Работаем с минимальной маржой. Показываем реальную рыночную стоимость без накруток.</p>
+        </div>
+        <div class="why-us-item" data-aos>
+            <div class="why-us-icon"><i class="fas fa-headset"></i></div>
+            <h4>На связи 7 дней</h4>
+            <p>Отвечаем в Telegram и WhatsApp с утра до позднего вечера. Без долгих ожиданий.</p>
+        </div>
+        <div class="why-us-item" data-aos>
+            <div class="why-us-icon"><i class="fas fa-tools"></i></div>
+            <h4>Свой сервис</h4>
+            <p>Ремонт и ТО прямо у нас. Покупаешь — получаешь поддержку на весь срок эксплуатации.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts">
+    <h2>Контакты</h2>
+    <div class="contacts-layout">
+        <div class="contacts-info">
+            <div class="contact-card">
+                <div class="contact-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>Адрес</strong><p>г. Москва, ул. Южнопортовая, 15 с18</p></div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-phone-alt"></i>
+                    <div><strong>Телефон</strong><p><a href="tel:+79775594704">+7 (977) 559-47-04</a></p></div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-envelope"></i>
+                    <div><strong>Email</strong><p><a href="mailto:mail@rvdrive.ru">mail@rvdrive.ru</a></p></div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-clock"></i>
+                    <div><strong>Режим работы</strong><p>Пн–Вс · 9:00–21:00</p></div>
+                </div>
+                <div class="contact-socials">
+                    <a href="https://t.me/rvDrive_Auto" target="_blank" class="contact-social-btn tg" rel="noopener noreferrer"><i class="fab fa-telegram"></i> Telegram</a>
+                    <a href="https://wa.me/89915914704" target="_blank" class="contact-social-btn wa" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://www.youtube.com/@rvDrive-dy6cx" target="_blank" class="contact-social-btn yt" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-map">
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?whatshere%5Bzoom%5D=19&whatshere%5Bpoint%5D=37.543176,55.546761&si=2fz6667z83nvv5gb7m8tddxfag;source=constructor"
+                    width="100%" height="100%" frameborder="0" allowfullscreen
+                    aria-label="Карта расположения rvDrive"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REQUEST FORM -->
+<section id="request">
+    <h2>Оставить заявку</h2>
+    <p class="section-sub">Выберите тип заявки — форма подстроится под вас</p>
+    <form id="inspectionForm" novalidate>
+        <label for="requestType">Тип заявки:</label>
+        <select id="requestType" required>
+            <option value="">-- Выберите --</option>
+            <option value="Покупка">🚗 Покупка</option>
+            <option value="Аренда">🔑 Аренда</option>
+            <option value="Аренда с выкупом">🤝 Аренда с выкупом</option>
+            <option value="Комиссия">📋 Комиссия</option>
+            <option value="Автоломбард">🏦 Автоломбард</option>
+            <option value="Автоподбор">🔍 Автоподбор</option>
+            <option value="Автосервис">🔧 Автосервис / Ремонт</option>
+        </select>
+        <label for="car">Автомобиль:</label>
+        <select id="car" required>
+            <option value="">-- Выберите автомобиль --</option>
+        </select>
+        <div id="uploadField" style="display:none;">
+            <label for="photo">Фото автомобиля:</label>
+            <input type="file" id="photo" accept="image/*">
+        </div>
+        <label for="fullName">ФИО:</label>
+        <input type="text" id="fullName" placeholder="Иван Иванов" required>
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
+        <p id="formMessage" aria-live="polite"></p>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="rvDrive" height="36">
+            <span>rvDrive</span>
+        </div>
+        <div class="footer-links">
+            <a href="#cars">Автомобили</a>
+            <a href="#services">Услуги</a>
+            <a href="service.html">Сервис</a>
+            <a href="#offers">Акции</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+        <div class="footer-socials">
+            <a href="https://t.me/rvDrive_Auto" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://wa.me/89915914704" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@rvDrive-dy6cx" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <p class="footer-copy">© 2025 rvDrive. Все права защищены. · Москва</p>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Наверх"><i class="fas fa-chevron-up"></i></button>
+
+</body>
+</html>
