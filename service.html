@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Автосервис rvDrive в Москве — диагностика, ТО, ремонт двигателя, ходовой, кузовные работы, шиномонтаж. Профессиональный ремонт любых марок.">
+    <meta name="keywords" content="автосервис Москва, ремонт автомобилей, техническое обслуживание, ТО, диагностика авто, ремонт двигателя, кузовной ремонт, шиномонтаж, замена масла, rvDrive сервис, СТО Москва">
+    <title>Автосервис rvDrive — Ремонт и обслуживание автомобилей в Москве</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="script.js" defer></script>
+    <style>
+        /* ── Service page specific styles ── */
+        .service-hero {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a0a0a 50%, #0f0f0f 100%);
+            padding: 80px 24px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--primary-red);
+        }
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230,57,70,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .service-hero h1 {
+            font-size: 2.6em;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .service-hero h1 span {
+            color: var(--primary-red);
+        }
+        .service-hero p {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+        .service-hero .badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .service-badge {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 8px 18px;
+            font-size: 0.88em;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .service-badge i {
+            color: var(--primary-red);
+        }
+
+        /* ── Service types grid ── */
+        .service-types {
+            padding: 60px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-types h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+        .service-types h2 span {
+            color: var(--primary-red);
+        }
+        .service-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-red);
+            border-radius: 4px 0 0 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-red);
+            box-shadow: 0 12px 32px rgba(230, 57, 70, 0.2);
+        }
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        .service-card-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(230, 57, 70, 0.12);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+        .service-card-icon i {
+            font-size: 1.5em;
+            color: var(--primary-red);
+        }
+        .service-card h3 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .service-card .price-tag {
+            display: inline-block;
+            margin-top: 14px;
+            background: rgba(230, 57, 70, 0.15);
+            color: var(--primary-red);
+            font-weight: 600;
+            font-size: 0.85em;
+            padding: 4px 12px;
+            border-radius: 50px;
+            border: 1px solid rgba(230, 57, 70, 0.3);
+        }
+
+        /* ── Why us ── */
+        .why-us {
+            background: var(--card-bg);
+            padding: 60px 24px;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .why-us-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .why-us h2 {
+            text-align: center;
+            font-size: 1.9em;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 28px;
+        }
+        .why-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .why-item .why-num {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--primary-red);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .why-item h4 {
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+        .why-item p {
+            font-size: 0.88em;
+            color: var(--text-secondary);
+        }
+
+        /* ── Process steps ── */
+        .process-section {
+            padding: 60px 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .process-section h2 {
+            text-align: center;
+            font-size: 1.9em;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 28px;
+            bottom: 28px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-red), transparent);
+        }
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            padding: 20px 0;
+        }
+        .step-circle {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            border-radius: 50%;
+            background: var(--primary-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.4);
+        }
+        .step-content h4 {
+            font-size: 1.05em;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+        .step-content p {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+
+        /* ── Service booking form ── */
+        .service-booking {
+            padding: 60px 24px;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a0505 100%);
+            border-top: 1px solid var(--glass-border);
+        }
+        .service-booking-inner {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .service-booking h2 {
+            text-align: center;
+            font-size: 1.9em;
+            margin-bottom: 8px;
+            color: var(--text-light);
+        }
+        .service-booking .sub {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-size: 0.95em;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .service-hero h1 { font-size: 1.8em; }
+            .process-steps::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html#home"><img src="img/logo.png" alt="rvDrive Logo"></a>
+            <span>rvDrive</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
+        <nav>
+            <a href="index.html#home">Главная</a>
+            <a href="index.html#cars">Автомобили</a>
+            <a href="index.html#services">Услуги</a>
+            <a href="service.html" class="active">Сервис</a>
+            <a href="index.html#offers">Спецпредложения</a>
+            <a href="index.html#contacts">Контакты</a>
+            <a href="#booking">Записаться</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://t.me/rvDrive_Auto" target="_blank" aria-label="Telegram" rel="noopener noreferrer">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://wa.me/89915914704" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.youtube.com/@rvDrive-dy6cx" target="_blank" aria-label="Youtube" rel="noopener noreferrer">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="service-hero">
+        <div class="badge-row">
+            <span class="service-badge"><i class="fas fa-star"></i> Открылся!</span>
+            <span class="service-badge"><i class="fas fa-map-marker-alt"></i> Москва</span>
+            <span class="service-badge"><i class="fas fa-clock"></i> Пн–Сб, 9:00–20:00</span>
+        </div>
+        <h1>Автосервис <span>rvDrive</span></h1>
+        <p>Профессиональный ремонт и техническое обслуживание любых марок и моделей. Честная диагностика, гарантия на все работы, прозрачные цены.</p>
+        <div class="cta-container">
+            <a href="#booking" class="cta">Записаться на сервис</a>
+            <a href="tel:+79915914704" class="cta secondary"><i class="fas fa-phone"></i> Позвонить</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="service-types">
+        <h2>Что мы <span>ремонтируем</span></h2>
+        <div class="service-cards-grid">
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Компьютерная диагностика</h3>
+                <p>Полная диагностика всех систем автомобиля. Считываем ошибки, определяем причину неисправности точно и быстро.</p>
+                <span class="price-tag">от 1 000 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-oil-can"></i></div>
+                <h3>Замена масла и фильтров</h3>
+                <p>Моторное масло, масляный, воздушный, салонный и топливный фильтры. Оригинальные расходники или аналоги по выбору.</p>
+                <span class="price-tag">от 500 ₽ + материалы</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-cog"></i></div>
+                <h3>Ремонт двигателя</h3>
+                <p>Замена ремня/цепи ГРМ, ремонт головки блока цилиндров, капитальный ремонт. Работаем с бензиновыми и дизельными моторами.</p>
+                <span class="price-tag">от 5 000 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-car-crash"></i></div>
+                <h3>Ходовая часть</h3>
+                <p>Замена амортизаторов, пружин, шаровых, рычагов, сайлентблоков, подшипников ступиц. Регулировка развал-схождения.</p>
+                <span class="price-tag">от 1 500 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-circle-notch"></i></div>
+                <h3>Тормозная система</h3>
+                <p>Замена тормозных колодок, дисков, суппортов. Прокачка тормозной системы. Диагностика ABS и ESP.</p>
+                <span class="price-tag">от 1 200 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-car-battery"></i></div>
+                <h3>Электрика и электроника</h3>
+                <p>Поиск и устранение неисправностей электрики. Замена аккумулятора, стартера, генератора. Установка допоборудования.</p>
+                <span class="price-tag">от 1 000 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-tools"></i></div>
+                <h3>Кузовной ремонт</h3>
+                <p>Устранение вмятин, сколов и царапин. Рихтовка и покраска. Подготовка кузова к продаже. Полировка.</p>
+                <span class="price-tag">по договорённости</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>Шиномонтаж и балансировка</h3>
+                <p>Сезонная замена резины, ремонт проколов, балансировка. Хранение шин. Подбор и продажа новых покрышек.</p>
+                <span class="price-tag">от 400 ₽ / колесо</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-wind"></i></div>
+                <h3>Кондиционер и климат</h3>
+                <p>Заправка фреона, устранение утечек, замена компрессора. Чистка испарителя. Проверка системы климат-контроля.</p>
+                <span class="price-tag">от 2 000 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-spray-can"></i></div>
+                <h3>Детейлинг и химчистка</h3>
+                <p>Профессиональная химчистка салона, полировка кузова, нанесение защитных покрытий. Подготовка к продаже — под ключ.</p>
+                <span class="price-tag">от 3 000 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-exchange-alt"></i></div>
+                <h3>Техническое обслуживание (ТО)</h3>
+                <p>Плановое ТО по регламенту производителя. Замена всех расходников, проверка всех узлов, отчёт о состоянии автомобиля.</p>
+                <span class="price-tag">от 3 500 ₽ + материалы</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Предпродажная подготовка</h3>
+                <p>Полный чек-ап перед покупкой или продажей. Диагностика, чистка, мелкий ремонт. Подготовим машину так, чтобы она продалась быстро.</p>
+                <span class="price-tag">от 5 000 ₽</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-us">
+        <div class="why-us-inner">
+            <h2>Почему выбирают нас</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-num">100%</div>
+                    <h4>Честная диагностика</h4>
+                    <p>Покажем только реальные проблемы. Без навязанных работ.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-num">1 год</div>
+                    <h4>Гарантия на работы</h4>
+                    <p>Гарантируем качество каждой выполненной операции.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-num">0 ₽</div>
+                    <h4>Бесплатная диагностика</h4>
+                    <p>При заказе ремонта — диагностика в подарок.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-num">24ч</div>
+                    <h4>Срочный ремонт</h4>
+                    <p>Большинство работ выполняем день в день.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-num">✓</div>
+                    <h4>Прозрачные цены</h4>
+                    <p>Фиксируем стоимость до начала работ. Никаких сюрпризов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="process-section">
+        <h2>Как записаться</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-circle">1</div>
+                <div class="step-content">
+                    <h4>Оставьте заявку</h4>
+                    <p>Заполните форму ниже или позвоните нам. Опишите проблему или укажите нужную услугу.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-circle">2</div>
+                <div class="step-content">
+                    <h4>Согласуем время</h4>
+                    <p>Перезвоним и запишем на удобное время. Приезжайте на нашу точку в Москве.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-circle">3</div>
+                <div class="step-content">
+                    <h4>Диагностика и согласование</h4>
+                    <p>Проведём диагностику, сообщим точную стоимость и перечень работ. Начинаем только с вашего согласия.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-circle">4</div>
+                <div class="step-content">
+                    <h4>Ремонт и выдача</h4>
+                    <p>Выполняем работы в срок, выдаём заказ-наряд и гарантийный талон. Расчёт после приёмки.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="booking" class="service-booking">
+        <div class="service-booking-inner">
+            <h2>Записаться на сервис</h2>
+            <p class="sub">Оставьте заявку — перезвоним в течение 30 минут</p>
+            <form id="serviceBookingForm" aria-label="Запись в автосервис rvDrive">
+                <label for="svcType">Услуга:</label>
+                <select id="svcType" required>
+                    <option value="">-- Выберите услугу --</option>
+                    <option value="Диагностика">Компьютерная диагностика</option>
+                    <option value="ТО">Техническое обслуживание (ТО)</option>
+                    <option value="Замена масла">Замена масла и фильтров</option>
+                    <option value="Двигатель">Ремонт двигателя</option>
+                    <option value="Ходовая">Ходовая часть</option>
+                    <option value="Тормоза">Тормозная система</option>
+                    <option value="Электрика">Электрика</option>
+                    <option value="Кузов">Кузовной ремонт</option>
+                    <option value="Шиномонтаж">Шиномонтаж</option>
+                    <option value="Кондиционер">Кондиционер / климат</option>
+                    <option value="Детейлинг">Детейлинг / химчистка</option>
+                    <option value="Предпродажная">Предпродажная подготовка</option>
+                    <option value="Другое">Другое</option>
+                </select>
+                <label for="svcCar">Марка и модель автомобиля:</label>
+                <input type="text" id="svcCar" placeholder="Например: Mercedes C200 2017" required>
+                <label for="svcName">ФИО:</label>
+                <input type="text" id="svcName" required>
+                <label for="svcPhone">Телефон:</label>
+                <input type="tel" id="svcPhone" required>
+                <label for="svcComment">Комментарий (опционально):</label>
+                <textarea id="svcComment" placeholder="Опишите проблему или уточните детали..."></textarea>
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Записаться</button>
+                <p id="svcFormMessage" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <section id="contacts" style="padding: 40px 24px;">
+        <h2 style="text-align:center;margin-bottom:24px;">Контакты</h2>
+        <div class="contact-card">
+            <p>📍 Адрес: г. Москва, ул. Южнопортовая, 15 с18</p>
+            <p>📞 Телефон: <a href="tel:+79915914704">+7 (991) 591-47-04</a></p>
+            <p>🕐 Режим работы: Пн–Сб 9:00–20:00</p>
+            <div class="social-icons" style="margin-top:16px;">
+                <a href="https://t.me/rvDrive_Auto" target="_blank" aria-label="Telegram" rel="noopener noreferrer">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://wa.me/89915914704" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.youtube.com/@rvDrive-dy6cx" target="_blank" aria-label="Youtube" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 rvDrive. Все права защищены. | <a href="index.html" style="color:var(--primary-red);">Главная</a></p>
+    </footer>
+
+    <script>
+    // Service booking form handler - mirrors main script logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('serviceBookingForm');
+        if (!form) return;
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const msg = document.getElementById('svcFormMessage');
+            const svcType = document.getElementById('svcType').value;
+            const svcCar  = document.getElementById('svcCar').value;
+            const svcName = document.getElementById('svcName').value;
+            const svcPhone = document.getElementById('svcPhone').value;
+            const svcComment = document.getElementById('svcComment').value;
+            const text = `🔧 Запись в сервис rvDrive\n\nУслуга: ${svcType}\nАвтомобиль: ${svcCar}\nФИО: ${svcName}\nТелефон: ${svcPhone}${svcComment ? '\nКомментарий: ' + svcComment : ''}`;
+            try {
+                const TELEGRAM_BOT_TOKEN = '7882621290:AAFnXJJEa_QCAP9UqhvPKzfevNHFLNaBbao';
+                const TELEGRAM_CHAT_ID   = '1006753536';
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text })
+                });
+                if (response.ok) {
+                    msg.textContent = '✅ Заявка отправлена! Перезвоним в течение 30 минут.';
+                    msg.style.color = '#4caf50';
+                    form.reset();
+                } else {
+                    throw new Error('Telegram error');
+                }
+            } catch {
+                msg.textContent = '❌ Ошибка отправки. Позвоните нам: +7 (991) 591-47-04';
+                msg.style.color = '#e63946';
+            }
+        });
+    });
+    </script>
+</body>
+</html>
